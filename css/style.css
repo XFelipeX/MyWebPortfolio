@@ -1,11 +1,80 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+@charset "UTF-8";
+
+/* HEIGHT 100% */
+html,
+body {
+  height: 100%;
 }
 
-body{
-    background-color: #ccc;
-    height: 100vh;
-    width:100vw;
+.bloco {
+  min-height: 100%;
+  padding-top: 94px;
 }
+
+/* HEADER */
+.home{
+    background-image: url(../img/back.jpg);
+    height: 100vh;
+    background-position: bottom left;
+}
+.header-title{
+    display: inline-block;
+    font-size: 1.5em;
+    margin:.2em 0 0 0;
+}
+
+/* MENU */
+.navbar{
+    background-color:transparent;
+}
+
+/* CUSTOM */
+.nav{
+    height: 94px;
+    line-height: 94px;
+}
+
+nav.nav-extended .nav-wrapper {
+  min-height: 94px;
+  height: auto;
+}
+
+.navbar-fixed {
+  position: absolute;
+  height: 94px;
+  z-index: 997;
+}
+
+.sidenav li>a{
+    color:#fff;
+    font-weight: 100;
+}
+
+nav i,
+nav [class^="mdi-"], nav [class*="mdi-"],
+nav i.material-icons header{
+  display: block;
+  font-size: 24px;
+  height: 94px;
+  line-height: 94px;
+  margin-top: 1em;
+}
+
+/*MEDIA*/
+@media only screen and (max-width: 480px) {
+
+}
+
+@media only screen and (min-width: 601px) {
+    .header-title{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+     .header-title{
+        font-size: 2.2rem;
+    }
+}
+
+

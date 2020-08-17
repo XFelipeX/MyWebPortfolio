@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>FelipeDev</title>
-</head>
-<body>
-   <h1>teste</h1> 
-</body>
+  </head>
+  <body>
+    <header>
+<!-- MENU MOBILE-->
+      <ul class="sidenav" id="menu-mobile">
+        <li><a href="#home">Home</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#unidades">Projetos</a></li>
+              <li><a href="#contato">Contato</a></li>
+      </ul>
+
+
+      <div class="navbar-fixed">
+        <nav class="navbar z-depth-0">
+          <div class="nav-wrapper container">
+          <h1 class="header-title">Portfólio</h1>
+
+          <ul class="right light hide-on-med-and-down">
+              <li>
+<a href="#home">Home</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#unidades">Projetos</a></li>
+              <li><a href="#contato">Contato</a></li>
+          </ul>
+
+           <a href="#" data-target="menu-mobile" class="sidenav-trigger right"
+              ><i class="material-icons">menu</i></a
+            >
+          
+          </div>
+        </nav>
+      </div>
+     
+    </header>
+    <main>
+        <section class="home bloco scrollspy">
+        
+        </section>
+    </main>
+
+    <footer></footer>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <!-- MATERIALIZE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- JAVASCRIPT -->
+    <script>
+      // INICIALIZAÇÃO
+      $(document).ready(function(){
+        // MENU MOBILE
+        $(".sidenav").sidenav();
+        // LINK INTERNO
+        $(".srollspy").scrollSpy({
+          scrollSpy:0
+        });
+      });
+    </script>
+  </body>
 </html>
