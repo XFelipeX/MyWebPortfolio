@@ -56,6 +56,27 @@ body {
     text-shadow: 2px 2px 1px black;
 }
 
+/* SERVICES */
+.services{
+  background-color:black;
+  height: 100%;
+}
+
+.services-title{
+  
+}
+
+.box{
+  background: #ccc;
+  width: 32%;
+  margin-left: 1%;
+  display: block;
+}
+
+.services-img{
+  padding-top: 2em;
+}
+
 /* SCROLL SETA */
 .setaScroll{
    border: solid #fff; /* cor da seta */
@@ -64,6 +85,24 @@ body {
    transform: rotate(45deg);
    -webkit-transform: rotate(45deg);
    opacity: .3;
+   animation:down 1.3s linear infinite;
+   position: relative;
+   top: 0px;
+}
+
+@keyframes down{
+   0% {
+  top: 0px;
+  opacity: 0;
+ }
+ 50%{
+   top: 8px;
+   opacity: 0.5;
+ }
+ 100% {
+  top: 20px;
+  opacity: 1;
+ }
 }
 
 /* CUSTOM */
@@ -107,6 +146,23 @@ nav i.material-icons header{
   margin-top: 1em;
 }
 
+.card{
+  background-color:#ccc;
+  border-radius: 2em;
+}
+
+.card-content > h3{
+  font-size: 1.5em;
+  padding:0 0 .2em 0;
+  margin: 0;
+}
+
+/* GRID */
+.row{
+  margin-bottom:0;
+  padding-bottom: 5em;
+}
+
 
 /*MEDIA*/
 @media only screen and (max-width: 480px) {
@@ -121,6 +177,7 @@ nav i.material-icons header{
   .banner{
     padding: 2em 0 0 0;
   }
+
 }
 
 @media only screen and (min-width: 601px) {
@@ -152,6 +209,11 @@ nav i.material-icons header{
 
     .main-subtitle{
       font-size:2em;
+    }
+
+    .row .col.l4 {
+    width: 30%;
+    margin-left: 2.4%;
     }
 }
 
