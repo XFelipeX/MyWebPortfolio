@@ -4,6 +4,8 @@
 html,
 body {
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size:16px ;
 }
 
 .bloco {
@@ -16,6 +18,8 @@ body {
     background-image: url(../img/back.jpg);
     height: 100vh;
     background-position: bottom left;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .header-title{
     display: inline-block;
@@ -26,6 +30,40 @@ body {
 /* MENU */
 .navbar{
     background-color:transparent;
+}
+
+.icons{
+  position: relative;
+  top:.2em;
+  right: .3em;
+}
+
+/* BANNER */
+.banner{
+  padding: 3em;
+  color: #fff;
+  text-align: center;
+}
+
+.main-title{
+  text-shadow: 6px 2px 3px black;
+  font-size: 2.5em;
+}
+
+.main-subtitle{
+  font-style: italic;
+  font-size: 1.5em;
+    text-shadow: 2px 2px 1px black;
+}
+
+/* SCROLL SETA */
+.setaScroll{
+   border: solid #fff; /* cor da seta */
+   border-width: 0 5px 5px 0; /* 5px = espessura da seta */
+   padding: 7px; /* tamanho da seta */
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+   opacity: .3;
 }
 
 /* CUSTOM */
@@ -45,9 +83,18 @@ nav.nav-extended .nav-wrapper {
   z-index: 997;
 }
 
+.sidenav{
+  background:url(../img/webb-dark.png);
+}
+
 .sidenav li>a{
-    color:#fff;
-    font-weight: 100;
+    color:rgb(158, 158, 158);
+    font-weight: 700;
+}
+
+nav ul a {
+  text-shadow: 5px 2px 4px black;
+  font-size: 1.2rem;
 }
 
 nav i,
@@ -60,20 +107,51 @@ nav i.material-icons header{
   margin-top: 1em;
 }
 
+
 /*MEDIA*/
 @media only screen and (max-width: 480px) {
+  .main-title{
+    font-size: 2em;
+  }
 
+  .main-subtitle{
+    font-size: 1.3em;
+  }
+
+  .banner{
+    padding: 2em 0 0 0;
+  }
 }
 
 @media only screen and (min-width: 601px) {
     .header-title{
         font-size: 2rem;
     }
+
+    .main-subtitle{
+      font-size:1.8em;
+    }
+
+    .banner{
+      padding:1em 0 0 0;
+    }
 }
 
 @media only screen and (min-width: 993px) {
      .header-title{
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .banner{
+  padding: 3em;
+    }
+
+    .main-title{
+    font-size: 4em;
+    }
+
+    .main-subtitle{
+      font-size:2em;
     }
 }
 

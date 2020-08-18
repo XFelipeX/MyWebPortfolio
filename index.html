@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> 
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -27,12 +28,22 @@
           <h1 class="header-title">Portfólio</h1>
 
           <ul class="right light hide-on-med-and-down">
-              <li>
-<a href="#home">Home</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#unidades">Projetos</a></li>
-              <li><a href="#contato">Contato</a></li>
+              <li>        
+<a href="#home"><span class="material-icons icons">
+home
+</span>Home</a></li>
+              <li><a href="#sobre"><span class="material-icons icons">
+article
+</span>Sobre</a></li>
+              <li><a href="#servicos"><span class="material-icons icons">
+build
+</span>Serviços</a></li>
+              <li><a href="#unidades"><span class="material-icons icons">
+code
+</span>Projetos</a></li>
+              <li><a href="#contato"><span class="material-icons icons">
+smartphone
+</span>Contato</a></li>
           </ul>
 
            <a href="#" data-target="menu-mobile" class="sidenav-trigger right"
@@ -46,7 +57,19 @@
     </header>
     <main>
         <section class="home bloco scrollspy">
-        
+          <div class="container banner">
+            <h1 class="main-title">Eu Sou Felipe Dias</h1>
+            <h2 class="main-subtitle">Web Developer, Software Developer.</h2>
+            <div class="scroll">
+            <a href="#"
+            style="color:#fff">
+            <span class="material-icons setaScroll">
+keyboard_arrow_down
+</span>
+            </a>
+              
+            </div>
+          </div>
         </section>
     </main>
 
@@ -65,7 +88,26 @@
         $(".srollspy").scrollSpy({
           scrollSpy:0
         });
+      })
+      
+      $(function(){
+   (function anima(){
+      $(".setaScroll").animate({
+         "top": "8", // 1ª animação: vai de 0 a 8 no top
+         "opacity": "1"
+      }, 500, function(){
+         $(this).animate({
+            "top": "12", // 2ª animação: vai de 8 a 12 no top
+            "opacity": ".1"
+         }, 500, function(){
+            $(this).css("top", "0"); // volto a seta para posição 0
+            anima(); // chamo a função criando um loop
+         });
       });
+   }())
+});
+
+      ;
     </script>
   </body>
 </html>
