@@ -77,6 +77,59 @@ body {
   padding-top: 2em;
 }
 
+/*SKILLS*/
+.skills-title{
+  margin: 0 0 1em 0;
+}
+
+.skills-title::after{
+  content: ' ';
+  display: block;
+  border: 2px solid rgb(32, 32, 78);
+  margin: 0 auto;
+  width: 150px;
+}
+
+.skills{
+  background:#ccc;
+  height: 100%;
+  font-size:1.3em;
+  font-weight: bold;
+}
+
+.skills-destaque{
+  background:#9181ec;
+  box-shadow: 2px 3px 5px transparent;
+  transition: all 1s ease-out ;
+}
+
+.group-itens li{
+  display: inline-block;
+  margin-right: 2em;
+  border: 3px solid black;
+  padding:.5em 2em;
+  margin:.5em;
+}
+
+.group .group-itens:last-child{
+  margin-bottom: 0;
+  padding-bottom: 3em;
+}
+
+.skills-destaque:hover{
+  margin-top: 1em;
+  animation: crescer 1s alternate;
+  background:rgba(0, 0, 0,.8);
+  box-shadow:2px 1px 10px black;
+  color:#fff;
+}
+
+@keyframes crescer{
+
+  100%{transform: scale(1.1);}
+}
+  
+
 /* SCROLL SETA */
 .setaScroll{
    border: solid #fff; /* cor da seta */
@@ -211,9 +264,16 @@ nav i.material-icons header{
       font-size:2em;
     }
 
+    .container{
+      width: 90%;
+    }
+
+    .group-itens{
+       margin-top: 0;
+    }
+
     .row .col.l4 {
-    width: 30%;
-    margin-left: 2.4%;
+    width: 33.33%;
     }
 }
 
