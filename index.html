@@ -30,13 +30,13 @@
       <!-- MENU MOBILE-->
       <ul class="sidenav" id="menu-mobile">
         <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#unidades">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
 
-      <div class="navbar-fixed">
+      <div class="navbar-fixed nav-color">
         <nav class="navbar z-depth-0">
           <div class="nav-wrapper container">
             <h1 class="header-title">Portfólio</h1>
@@ -48,22 +48,22 @@
                 >
               </li>
               <li>
-                <a href="#sobre"
+                <a href="#about"
                   ><span class="material-icons icons"> article </span>Sobre</a
                 >
               </li>
               <li>
-                <a href="#servicos"
+                <a href="#services"
                   ><span class="material-icons icons"> build </span>Serviços</a
                 >
               </li>
               <li>
-                <a href="#unidades"
+                <a href="#projects"
                   ><span class="material-icons icons"> code </span>Projetos</a
                 >
               </li>
               <li>
-                <a href="#contato"
+                <a href="#contact"
                   ><span class="material-icons icons"> smartphone </span
                   >Contato</a
                 >
@@ -79,12 +79,15 @@
     </header>
     <main>
       <!-- HOME -->
-      <section class="home bloco scrollspy">
+      <section class="home bloco scrollspy" id="home">
         <div class="container banner">
-          <h1 class="main-title">Eu Sou Felipe Dias</h1>
-          <h2 class="main-subtitle">Web Developer, Software Developer.</h2>
-          <div class="scroll">
-            <a href="#services" style="color: #fff;">
+        <div class="row home-group">
+            <h1 class="main-title"><i class="material-icons medium black-text code-icon">code</i>Felipe Dias</h1>
+         
+        </div>
+           <h2 class="main-subtitle">Web Developer, Software Developer.</h2>
+          <div>
+            <a class="scroll" href="#services" style="color: #fff;">
               <span class="material-icons setaScroll">
                 keyboard_arrow_down
               </span>
@@ -94,7 +97,7 @@
       </section>
 
       <!-- SERVIÇOS -->
-      <section class="services bloco" id="services">
+      <section class="services bloco scrollspy" id="services">
         <h2 class="services-title center white-text">Serviços</h2>
 
         <div class="row center container">
@@ -146,7 +149,7 @@
       </section>
 
       <!-- HABILIDADES -->
-      <section class="skills bloco">
+      <section class="skills bloco scrollspy" id="skills">
         <div class="group container row">
           <h2 class="skills-title center dark-text">Habilidades</h2>
           <div class="col s12 m9">
@@ -156,7 +159,7 @@
               <li class="skills-destaque">JavaScript</li>
             </ul>
             <ul class="group-itens">
-              <li class="skills-destaque">JAVA</li>
+              <li class="skills-destaque">Java</li>
               <li>BootStrap</li>
               <li class="skills-destaque">Git</li>
             </ul>
@@ -181,8 +184,9 @@
       </section>
 
       <!-- SOBRE -->
-      <section class="about bloco white-text">
+      <section class="about bloco white-text scrollspy" id="about">
         <div class="row container">
+        <h2 class="about-title center white-text">Sobre</h2>
           <div class="col s12 m6 style-card center">
             <img
               src="/img/eu.jpg"
@@ -237,9 +241,17 @@
         // MENU MOBILE
         $(".sidenav").sidenav();
         // LINK INTERNO
-        $(".srollspy").scrollSpy({
-          scrollSpy: 0,
+        $(".scrollspy").scrollSpy({
+          scrollOffset: 0,
         });
+      });
+      // ADICIONANDO NAVCOLOR
+      $(window).on("scroll", function() {
+        if ($(window).scrollTop() > 500){
+          $(".navbar").addClass("nav-color");
+        }else{
+          $(".navbar").removeClass("nav-color");
+        }
       });
     </script>
   </body>
