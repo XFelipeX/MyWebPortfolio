@@ -65,7 +65,6 @@ body {
 .home-group {
   position: relative;
   height: 100px;
-  left: 7.2em;
 }
 
 .code-icon {
@@ -160,7 +159,7 @@ background-color: #ccc;
   padding-bottom: 3em;
 }
 
-.skills-destaque:hover {
+.skills .col .group-itens .skills-destaque:hover {
   margin-top: 1em;
   animation: crescer 1s alternate;
   background: rgba(0, 0, 0, 0.8);
@@ -352,6 +351,12 @@ background-color: #ccc;
   color: white;
 }
 
+.text{
+  padding-left: 1.3em;
+  opacity: 0;
+  transition:4s;
+}
+
 /* CONTACT */
 .contact {
   background-color: black;
@@ -371,7 +376,7 @@ background-color: #ccc;
 .contact-icons {
   display: inline-block;
   position: relative;
-  top: 10em;
+  top: 6em;
 }
 
 .contact-icons img:nth-child(2) {
@@ -416,7 +421,7 @@ background-color: #ccc;
 }
 
 .contact.bloco h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 0;
   margin: 1em;
 }
@@ -457,13 +462,13 @@ nav.nav-extended .nav-wrapper {
 }
 
 .sidenav li > a {
-  color: rgb(158, 158, 158);
+  color: white;
   font-weight: 700;
 }
 
 nav ul a {
   text-shadow: 5px 2px 4px black;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 nav i,
@@ -540,15 +545,6 @@ nav i.material-icons header {
     padding: 2em 0 0 0;
   }
 
-  .main-title {
-    position: relative;
-    left: -0.6em;
-  }
-
-  .home-group {
-    left: 1.2em;
-  }
-
   .row .col.m4 {
     width: 100%;
     margin-top: 2em;
@@ -567,7 +563,7 @@ nav i.material-icons header {
   }
 
   .main-subtitle {
-    font-size: 1.8em;
+    font-size: 1.3em;
   }
 
   .banner {
@@ -578,7 +574,7 @@ nav i.material-icons header {
   }
 
   .home-group {
-    left: -5.8em;
+    left: -44px;
   }
 
   .row .col.m6 {
@@ -624,26 +620,24 @@ nav i.material-icons header {
     height: 200px;
   }
 
+  .contact.bloco h2 {
+  font-size: 1.5rem;
+  }
+
   
 }
 
 @media only screen and (min-width: 993px) {
   .header-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .banner {
     padding: 3em;
   }
 
-  .main-title {
-    font-size: 3em;
-    position: relative;
-    right: 2.2em;
-  }
-
   .main-subtitle {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   .container {
@@ -655,11 +649,15 @@ nav i.material-icons header {
   }
 
   .home-group {
-    left: 4.5em;
+    left: -2em;
   }
 
   .card.medium {
   height: 320px;
+}
+
+.style-card{
+  height: 31em;
 }
 
 .style-card:last-child p {
@@ -673,5 +671,19 @@ nav i.material-icons header {
 
   .projects-group {
     height: 230px;
+  }
+
+  .about-info{
+    font-size: 1em;
+    padding-bottom: 2em;
+  }
+
+  .style-card:last-child h4 {
+    font-size: 1.2em;
+  }
+
+  .footer p{
+    font-size:1.3em;
+    top: 1.7em;
   }
 }

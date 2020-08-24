@@ -101,7 +101,7 @@
       <!-- HOME -->
       <section class="home bloco scrollspy" id="home">
         <div class="container banner">
-          <div class="row home-group">
+          <div class="home-group center">
             <h1 class="main-title">
               <i class="material-icons medium black-text code-icon">code</i
               >Felipe Dias
@@ -280,7 +280,8 @@
       <!-- PROJETOS -->
       <section class="projects bloco scrollspy" id="projects">
         <div class="container row center">
-          <h2 class="projects-title white-text">Projetos</h2>
+          <p class="left white-text light text hide-on-small-only">// Em breve mais projetos</p>
+          <h2 class="projects-title white-text clearfix">Projetos</h2>
           <article class="col s12 m4 project-group">
             <img
               src="img/projects/respes.png"
@@ -288,7 +289,7 @@
               class="responsive-img materialboxed"
               width="100%"
             />
-            <a href="#">
+            <a href="https://xfelipex.github.io/RespesTemp/" target="_blank">
               <i class="material-icons medium projects-links">
                 link
               </i>
@@ -300,25 +301,23 @@
       </section>
 
       <!-- CONTATOS -->
-      <section class="contact bloco scrollspy center">
-      <h2 class="white-text">Entre em contato:</h2>
+      <section class="contact bloco scrollspy center" id="contact">
+        <h2 class="white-text">Precisa de mais informações?</h2>
         <div class="row contact-back center">
-          
-            <div class="contact-icons">
-            <a href="#">
-               <img src="img/social/whatsapp.png" alt="whatsapp">
+          <div class="contact-icons">
+            <a href="http://wa.me/5511966699277" target="_blank">
+              <img src="img/social/whatsapp.png" alt="whatsapp" />
             </a>
-              <a href="#">
-              <img src="img/social/linkedin.png" alt="whatsapp">
-              </a>
-              <a href="#">
-                <img src="img/social/github.png" alt="whatsapp">
-         
-              </a>
-       
-            
-            </div>
-           
+            <a
+              href="https://www.linkedin.com/in/felipe-dias-1a6302181/"
+              target="_blank"
+            >
+              <img src="img/social/linkedin.png" alt="whatsapp" />
+            </a>
+            <a href="https://github.com/XFelipeX" target="_blank">
+              <img src="img/social/github.png" alt="whatsapp" />
+            </a>
+          </div>
         </div>
       </section>
     </main>
@@ -353,6 +352,24 @@
           $(".navbar").removeClass("nav-color");
         }
       });
+
+      // ANIMAÇÃO
+      function scrollY() {
+        let eixoY = window.pageYOffset;
+        let text = document.querySelector('.text');
+        if(eixoY>=2057){
+          text.style = 'opacity: 1;';
+        }else{
+          text.style = 'opacity: 0;';
+        }
+        console.log(eixoY);
+      }
+
+      window.addEventListener('scroll', function() {
+    scrollY();
+})
+
+      
     </script>
   </body>
 </html>
