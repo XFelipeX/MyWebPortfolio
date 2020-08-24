@@ -80,9 +80,10 @@ body {
   height: 100%;
 }
 
-.services p{
+.services p {
   text-indent: 1em;
   text-align: left;
+  padding: 0 .3em;
 }
 
 .services-title {
@@ -111,15 +112,18 @@ body {
   height: 120px;
 }
 
-
-  .services .container .col .card .card-content h3{
-    font-size: 1.3em;
-  }
+.services .container .col .card .card-content h3 {
+  font-size: 1.3em;
+}
 
 /*SKILLS*/
+.skills{
+background-color: #ccc;
+}
+
 .skills-title {
   margin: 0 0 1em 0;
-  font-size: 2.7em;
+  font-size: 2em;
 }
 
 .skills-title::after {
@@ -130,14 +134,14 @@ body {
   width: 100px;
 }
 
-.skills:not(.skills-title) {
+.skills .col .group-itens li {
   background: #ccc;
   height: 100%;
-  font-size: .6em;
+  font-size: 0.6em;
   font-weight: bold;
 }
 
-.skills-destaque {
+.skills .col .group-itens .skills-destaque {
   background: #9181ec;
   box-shadow: 2px 3px 5px transparent;
   transition: all 1s ease-out;
@@ -222,7 +226,7 @@ body {
   box-shadow: 5px 3px 5px #2d3a7d;
   border: 2px solid transparent;
   transition: all 1s;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .about-info:hover {
@@ -230,7 +234,7 @@ body {
 }
 
 .style-card:last-child {
-  padding: 0 .5em;
+  padding: 0 .7em;
   margin-top: 3em;
   height: 34em;
 }
@@ -242,7 +246,7 @@ body {
 .style-card:last-child p {
   text-indent: 2em;
   text-align: left;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .style-card:last-child:hover {
@@ -271,10 +275,8 @@ body {
   width: 70px;
 }
 
-
-
-.button{
-  color:rgb(32, 32, 78);
+.button {
+  color: rgb(32, 32, 78);
   padding: 1em 0 1em 1em;
   display: inline-block;
   width: 200px;
@@ -285,10 +287,10 @@ body {
   text-align: left;
 }
 
-.button:hover{
-  color:white;
+.button:hover {
+  color: white;
   background-color: rgb(32, 32, 78);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 /* SCROLL SETA */
@@ -320,13 +322,13 @@ body {
 }
 
 /* PROJECTS */
-.projects{
+.projects {
   background-color: #292424;
   padding-bottom: 2em;
 }
 
-.project-group{
-  width:32%;
+.project-group {
+  width: 32%;
   margin-left: 2%;
   height: 250px;
   background-color: rgba(83, 73, 141, 0.363);
@@ -334,7 +336,7 @@ body {
   border-radius: 0 0 30px 30px;
 }
 
-.projects-title{
+.projects-title {
   font-size: 2em;
 }
 
@@ -346,85 +348,87 @@ body {
   width: 100px;
 }
 
-.projects-links{
-  color:white;
+.projects-links {
+  color: white;
 }
 
 /* CONTACT */
-.contact{
+.contact {
   background-color: black;
 }
 
-.contact-back{
+.contact-back {
   opacity: 0.5;
-  background: url('../img/back2.jpg');
+  background: url("../img/back2.jpg");
   height: 250px;
   width: 100%;
   background-size: cover;
-  background-position:center;
+  background-position: center;
   background-attachment: fixed;
   margin-bottom: 4em;
 }
 
-.contact-icons{
+.contact-icons {
   display: inline-block;
   position: relative;
   top: 10em;
 }
 
-.contact-icons img:nth-child(2){
+.contact-icons img:nth-child(2) {
   margin-left: 3em;
   margin-right: 3em;
 }
 
-.contact-icons img{
+.contact-icons img {
   width: 50px;
   border: 2px solid white;
   border-radius: 1em;
 }
 
-.contact-icons a:first-child img:hover{
+.contact-icons a:first-child img {
   border-color: rgb(59, 255, 59);
 }
 
-@keyframes changeBorder{
-  0%{border-color: white;}
-  100%{border-color: rgb(59, 255, 59);;}
+@keyframes changeBorder {
+  0% {
+    border-color: white;
+  }
+  100% {
+    border-color: rgb(59, 255, 59);
+  }
 }
 
-.contact-icons a:nth-child(2) img:hover{
+.contact-icons a:nth-child(2) img{
   border-color: rgb(63, 140, 255);
 }
 
-.contact-icons a:nth-child(2){
+.contact-icons a:nth-child(2) {
   margin-left: 2em;
   margin-right: 2em;
 }
 
-.contact-icons img:last-child:hover{
-  border-color: rgb(0,0,0);
+.contact-icons img:last-child {
+  border-color: rgb(0, 0, 0);
 }
-
-
 
 .contact.bloco {
   padding-top: 2em;
 }
 
 .contact.bloco h2 {
-    font-size: 1.5rem;
-    line-height: 0;
-    margin:1em;
+  font-size: 1.5rem;
+  line-height: 0;
+  margin: 1em;
 }
 
 /* FOOTER */
-.footer{
+.footer {
   height: 100px;
-   background-color: black;
+  background-color: black;
 }
 
-.footer p{
-  color:white;
+.footer p {
+  color: white;
   font-size: 1em;
   position: relative;
   top: 2.3em;
@@ -485,16 +489,16 @@ nav i.material-icons header {
   margin: 0;
 }
 
-.card-content > p{
-  font-size: .9em;
+.card-content > p {
+  font-size: 0.9em;
 }
 
 .card .card-content {
-    padding: 24px 10px;
+  padding: 24px 10px;
 }
 
-.projects h2{
-   margin-top: 0;
+.projects h2 {
+  margin-top: 0;
 }
 
 /* GRID */
@@ -504,8 +508,8 @@ nav i.material-icons header {
 }
 
 .row .col.m4 {
-    width: 32%;
-    margin-left: 1%;
+  width: 32%;
+  margin-left: 1%;
 }
 
 .projects .row .col {
@@ -513,15 +517,14 @@ nav i.material-icons header {
 }
 
 .card.medium {
-    height: 327px;
+  height: 370px;
 }
 
-
-
 /*MEDIA*/
-@media only screen and (max-width: 400px) {
- 
-
+@media only screen and (min-width: 400px) {
+  .style-card:last-child {
+    height: 26em;
+  }
 }
 
 @media only screen and (max-width: 740px) {
@@ -546,16 +549,16 @@ nav i.material-icons header {
     left: 1.2em;
   }
 
-   .row .col.m4 {
+  .row .col.m4 {
     width: 100%;
     margin-top: 2em;
-    
   }
 
-  .projects .row .col.m4 {
-    height: 220px;
+  .projects-group {
+    height: 170px;
   }
 
+  
 }
 
 @media only screen and (min-width: 601px) {
@@ -584,13 +587,44 @@ nav i.material-icons header {
   }
 
   .row .col.m4 {
-    width: 33.33%;
-    margin-left: 0;
+    width: 31%;
+    margin-left: 2.3%;
   }
 
   .card.medium {
-    height: 590px;
+    height: 451px;
+  }
+
+  .style-card:last-child {
+    margin-top: 0;
+  }
+
+  .style-card:last-child p {
+    font-size: .8em;
+    padding: 0 .4em;
+  }
+
+  .services p {
+    padding: 0 .5em;
 }
+
+  .row .col {
+    padding: 0 .4rem;
+  }
+
+  .skills .col .group-itens li {
+    font-size: 1em;
+  }
+
+  .style-card:last-child {
+    height: 34em;
+}
+
+.projects-group {
+    height: 200px;
+  }
+
+  
 }
 
 @media only screen and (min-width: 993px) {
@@ -624,7 +658,20 @@ nav i.material-icons header {
     left: 4.5em;
   }
 
+  .card.medium {
+  height: 320px;
+}
+
+.style-card:last-child p {
+    font-size: 1em;
+    padding: 0 .7em;
+}
+
   .row .col.l4 {
     width: 33.33%;
+  }
+
+  .projects-group {
+    height: 230px;
   }
 }
