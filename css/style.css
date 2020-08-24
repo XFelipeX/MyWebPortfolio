@@ -87,7 +87,7 @@ body {
 
 .services-title {
   margin-top: 0;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .services-title::after {
@@ -107,12 +107,19 @@ body {
 
 .services-img {
   padding-top: 2em;
+  width: 100px;
+  height: 120px;
 }
+
+
+  .services .container .col .card .card-content h3{
+    font-size: 1.3em;
+  }
 
 /*SKILLS*/
 .skills-title {
   margin: 0 0 1em 0;
-  font-size: 2em;
+  font-size: 2.7em;
 }
 
 .skills-title::after {
@@ -120,13 +127,13 @@ body {
   display: block;
   border: 2px solid rgb(32, 32, 78);
   margin: 0 auto;
-  width: 150px;
+  width: 100px;
 }
 
-.skills {
+.skills:not(.skills-title) {
   background: #ccc;
   height: 100%;
-  font-size: 1.3em;
+  font-size: .6em;
   font-weight: bold;
 }
 
@@ -191,7 +198,7 @@ body {
 }
 
 .style-card {
-  height: 33em;
+  height: 26em;
   width: 48%;
   margin-left: 2%;
   border-radius: 1em;
@@ -209,12 +216,13 @@ body {
   background-color: #2e2e2e;
   width: 100%;
   text-align: left;
-  padding: 0.5em 3em;
+  padding: 0.3em 1em;
   margin-top: 1em;
   border-radius: 1em;
   box-shadow: 5px 3px 5px #2d3a7d;
   border: 2px solid transparent;
   transition: all 1s;
+  font-size: .8em;
 }
 
 .about-info:hover {
@@ -222,12 +230,19 @@ body {
 }
 
 .style-card:last-child {
-  padding: 0 2.5em;
+  padding: 0 .5em;
+  margin-top: 3em;
+  height: 34em;
+}
+
+.style-card:last-child h4 {
+  font-size: 1.7em;
 }
 
 .style-card:last-child p {
   text-indent: 2em;
   text-align: left;
+  font-size: .8em;
 }
 
 .style-card:last-child:hover {
@@ -238,14 +253,14 @@ body {
   box-sizing: border-box;
   border-radius: 10%;
   margin-top: 1em;
-  width: 200px;
+  width: 150px;
   height: 130px;
   box-shadow: 20px 5px 1px rgb(26, 26, 29);
 }
 
 .about-title {
   margin: 0 0 1em 0;
-  font-size: 2.7em;
+  font-size: 2em;
 }
 
 .about-title::after {
@@ -255,6 +270,8 @@ body {
   margin: 0 auto;
   width: 70px;
 }
+
+
 
 .button{
   color:rgb(32, 32, 78);
@@ -318,7 +335,7 @@ body {
 }
 
 .projects-title{
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .projects-title::after {
@@ -339,23 +356,65 @@ body {
 }
 
 .contact-back{
-  opacity: 0.3;
-  background:url('/img/back2.jpg');
-  height: 300px;
+  opacity: 0.5;
+  background: url('../img/back2.jpg');
+  height: 250px;
+  width: 100%;
   background-size: cover;
   background-position:center;
+  background-attachment: fixed;
   margin-bottom: 4em;
 }
 
 .contact-icons{
   display: inline-block;
   position: relative;
-  top: 6em;
+  top: 10em;
 }
 
 .contact-icons img:nth-child(2){
-  margin-left: 6em;
-  margin-right: 6em;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.contact-icons img{
+  width: 50px;
+  border: 2px solid white;
+  border-radius: 1em;
+}
+
+.contact-icons a:first-child img:hover{
+  border-color: rgb(59, 255, 59);
+}
+
+@keyframes changeBorder{
+  0%{border-color: white;}
+  100%{border-color: rgb(59, 255, 59);;}
+}
+
+.contact-icons a:nth-child(2) img:hover{
+  border-color: rgb(63, 140, 255);
+}
+
+.contact-icons a:nth-child(2){
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.contact-icons img:last-child:hover{
+  border-color: rgb(0,0,0);
+}
+
+
+
+.contact.bloco {
+  padding-top: 2em;
+}
+
+.contact.bloco h2 {
+    font-size: 1.5rem;
+    line-height: 0;
+    margin:1em;
 }
 
 /* FOOTER */
@@ -366,9 +425,9 @@ body {
 
 .footer p{
   color:white;
-  font-size: 1.5em;
+  font-size: 1em;
   position: relative;
-  top: 1em;
+  top: 2.3em;
   margin: 0;
 }
 
@@ -426,6 +485,14 @@ nav i.material-icons header {
   margin: 0;
 }
 
+.card-content > p{
+  font-size: .9em;
+}
+
+.card .card-content {
+    padding: 24px 10px;
+}
+
 .projects h2{
    margin-top: 0;
 }
@@ -444,6 +511,12 @@ nav i.material-icons header {
 .projects .row .col {
   padding: 0;
 }
+
+.card.medium {
+    height: 327px;
+}
+
+
 
 /*MEDIA*/
 @media only screen and (max-width: 400px) {
@@ -475,7 +548,14 @@ nav i.material-icons header {
 
    .row .col.m4 {
     width: 100%;
+    margin-top: 2em;
+    
   }
+
+  .projects .row .col.m4 {
+    height: 220px;
+  }
+
 }
 
 @media only screen and (min-width: 601px) {
@@ -491,7 +571,7 @@ nav i.material-icons header {
     padding: 1em 0 0 0;
   }
   .container {
-    width: 85%;
+    width: 95%;
   }
 
   .home-group {
@@ -502,6 +582,15 @@ nav i.material-icons header {
     width: 49%;
     margin-right: 1%;
   }
+
+  .row .col.m4 {
+    width: 33.33%;
+    margin-left: 0;
+  }
+
+  .card.medium {
+    height: 590px;
+}
 }
 
 @media only screen and (min-width: 993px) {
