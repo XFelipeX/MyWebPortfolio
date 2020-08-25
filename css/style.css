@@ -388,12 +388,12 @@ background-color: #ccc;
 }
 
 .contact-back {
-  opacity: 0.7;
-  background: url("../img/back2.jpg");
+  opacity: 0.8;
+  background: url("../img/back3.jpg");
   height: 250px;
   width: 100%;
   background-size: cover;
-  background-position: top;
+
   background-attachment: fixed;
   margin-bottom: 4em;
 }
@@ -404,19 +404,25 @@ background-color: #ccc;
   top: 6em;
 }
 
-.contact-icons img:nth-child(2) {
-  margin-left: 3em;
-  margin-right: 3em;
+a[href="http://wa.me/5511966699277"]{
+  color:rgb(30, 202, 30);
 }
 
-.contact-icons img {
-  width: 50px;
-  border: 2px solid white;
-  border-radius: 1em;
+a[href="https://www.linkedin.com/in/felipe-dias-1a6302181/"]{
+  color: rgb(38, 141, 238);
 }
 
-.contact-icons a:first-child img {
-  border-color: rgb(59, 255, 59);
+a[href="https://github.com/XFelipeX"]{
+  color:#000;
+}
+
+.contact-icons a{
+  transition: all .4s ease-in-out;
+  font-size: 3em;
+}
+
+.contact-icons a:hover{
+  font-size: 3.4em;
 }
 
 @keyframes changeBorder {
@@ -428,17 +434,9 @@ background-color: #ccc;
   }
 }
 
-.contact-icons a:nth-child(2) img{
-  border-color: rgb(63, 140, 255);
-}
-
 .contact-icons a:nth-child(2) {
-  margin-left: 2em;
-  margin-right: 2em;
-}
-
-.contact-icons img:last-child {
-  border-color: rgb(0, 0, 0);
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .contact.bloco {
@@ -448,7 +446,7 @@ background-color: #ccc;
 .contact.bloco h2 {
   font-size: 1.3rem;
   line-height: 0;
-  margin: 1em;
+  margin: 3em 0 2em;
 }
 
 /* FOOTER */
@@ -565,11 +563,11 @@ nav i.material-icons header {
 }
 
 [data-anime="left"]{
-  transform: translate3d(-100px, 0,0);
+  transform: translate3d(-50px, 0,0);
 }
 
 [data-anime="right"]{
-  transform: translate3d(100px, 0,0);
+  transform: translate3d(50px, 0,0);
 }
 
 [data-anime].animate{
