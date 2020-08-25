@@ -64,27 +64,27 @@
             <ul class="right light hide-on-med-and-down">
               <li>
                 <a href="#home"
-                  ><span class="material-icons icons"> home </span>Home</a
+                  class="nav-link"><span class="material-icons icons"> home </span>Home</a
                 >
               </li>
               <li>
                 <a href="#about"
-                  ><span class="material-icons icons"> article </span>Sobre</a
+                  class="nav-link"><span class="material-icons icons"> article </span>Sobre</a
                 >
               </li>
               <li>
                 <a href="#services"
-                  ><span class="material-icons icons"> build </span>Serviços</a
+                  class="nav-link"><span class="material-icons icons"> build </span>Serviços</a
                 >
               </li>
               <li>
                 <a href="#projects"
-                  ><span class="material-icons icons"> code </span>Projetos</a
+                  class="nav-link"><span class="material-icons icons"> code </span>Projetos</a
                 >
               </li>
               <li>
                 <a href="#contact"
-                  ><span class="material-icons icons"> smartphone </span
+                  class="nav-link"><span class="material-icons icons"> smartphone </span
                   >Contato</a
                 >
               </li>
@@ -124,10 +124,10 @@
 
         <div class="row center container">
           <div class="col s12 m4">
-            <div class="card medium">
+            <div class="card medium" data-anime="bottom">
               <img src="img/web.png" class="services-img" />
 
-              <div class="card-content">
+              <div class="card-content" >
                 <h3>
                   <span class="indigo-text darken-4">Desenvolvimento Web</span>
                 </h3>
@@ -141,7 +141,7 @@
           </div>
 
           <div class="col s12 m4">
-            <div class="card medium">
+            <div class="card medium" data-anime="bottom">
               <img src="img/phone.png" class="services-img" />
 
               <div class="card-content">
@@ -161,7 +161,7 @@
           </div>
 
           <div class="col s12 m4">
-            <div class="card medium">
+            <div class="card medium" data-anime="bottom">
               <img src="img/desktop.png" class="services-img" />
 
               <div class="card-content">
@@ -185,7 +185,7 @@
       <section class="skills bloco scrollspy" id="skills">
         <div class="group container row">
           <h2 class="skills-title center dark-text">Habilidades</h2>
-          <div class="col s12 m12 l9">
+          <div class="col s12 m12 l9" data-anime="left">
             <ul class="group-itens">
               <li class="skills-destaque">HTML5</li>
               <li class="skills-destaque">CSS3</li>
@@ -210,7 +210,7 @@
               <li class="skills-destaque">Responsividade</li>
             </ul>
           </div>
-          <div class="col m3 hide-on-med-and-down">
+          <div class="col l3 hide-on-med-and-down">
             <img
               class="img-programmer"
               src="img/others/img-animation.gif"
@@ -224,7 +224,7 @@
       <section class="about bloco white-text scrollspy" id="about">
         <div class="row container">
           <h2 class="about-title center white-text">Sobre</h2>
-          <div class="col s12 m6 style-card center">
+          <div class="col s12 m6 style-card center" data-anime="left">
             <img
               src="img/eu.jpg"
               alt="Foto de Felipe, autor da página"
@@ -249,7 +249,7 @@
               </button>
             </div>
           </div>
-          <div class="col s12 m6 style-card center">
+          <div class="col s12 m6 style-card center" data-anime="right">
             <h4>Sobre Mim</h4>
             <p>
               Meu nome é <b>Felipe</b>, tenho 21 anos. Atualmente, estudo
@@ -279,7 +279,7 @@
 
       <!-- PROJETOS -->
       <section class="projects bloco scrollspy" id="projects">
-        <div class="container row center">
+        <div class="container row center" data-anime="bottom">
           <p class="left white-text light text hide-on-small-only">// Em breve mais projetos</p>
           <h2 class="projects-title white-text clearfix">Projetos</h2>
           <article class="col s12 m4 project-group">
@@ -295,14 +295,26 @@
               </i>
             </a>
           </article>
-          <article class="col s12 m4 project-group"></article>
+          <article class="col s12 m4 project-group">
+             <img
+              src="img/projects/farmathor.png"
+              alt=""
+              class="responsive-img materialboxed"
+              width="100%"
+            />
+            <a href="https://github.com/XFelipeX/Projeto-PI-2" target="_blank">
+              <i class="material-icons medium projects-links">
+                link
+              </i>
+            </a>
+          </article>
           <article class="col s12 m4 project-group"></article>
         </div>
       </section>
 
       <!-- CONTATOS -->
       <section class="contact bloco scrollspy center" id="contact">
-        <h2 class="white-text">Precisa de mais informações?</h2>
+        <h2 class="indigo-text">Precisa de mais informações?</h2>
         <div class="row contact-back center">
           <div class="contact-icons">
             <a href="http://wa.me/5511966699277" target="_blank">
@@ -352,24 +364,8 @@
           $(".navbar").removeClass("nav-color");
         }
       });
-
-      // ANIMAÇÃO
-      function scrollY() {
-        let eixoY = window.pageYOffset;
-        let text = document.querySelector('.text');
-        if(eixoY>=2057){
-          text.style = 'opacity: 1;';
-        }else{
-          text.style = 'opacity: 0;';
-        }
-        console.log(eixoY);
-      }
-
-      window.addEventListener('scroll', function() {
-    scrollY();
-})
-
-      
     </script>
+    <!-- ANIMAÇÃO -->
+    <script src="js/animation.js"></script>
   </body>
 </html>

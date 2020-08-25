@@ -39,6 +39,26 @@ body {
   right: 0.3em;
 }
 
+.nav-link{
+  position: relative;
+}
+
+.nav-link::before{
+  content: '';
+  position: absolute;
+  margin: 10px;
+  width: 0%;
+  bottom: 1.3em;
+  left: 0;
+  height: 2px;
+  transition: all 500ms ease;
+  background-color:white ;
+}
+
+.nav-link:hover::before{
+  width: 75%;
+}
+
 .nav-color {
   background-color: rgba(65, 48, 161, 0.521);
 }
@@ -324,6 +344,7 @@ background-color: #ccc;
 .projects {
   background-color: #292424;
   padding-bottom: 2em;
+  padding-top: 1em;
 }
 
 .project-group {
@@ -333,6 +354,10 @@ background-color: #ccc;
   background-color: rgba(83, 73, 141, 0.363);
   padding: 0;
   border-radius: 0 0 30px 30px;
+}
+
+.project-group img{
+  height: 170px;
 }
 
 .projects-title {
@@ -363,12 +388,12 @@ background-color: #ccc;
 }
 
 .contact-back {
-  opacity: 0.5;
+  opacity: 0.7;
   background: url("../img/back2.jpg");
   height: 250px;
   width: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
   margin-bottom: 4em;
 }
@@ -471,6 +496,10 @@ nav ul a {
   font-size: 1rem;
 }
 
+nav ul a:hover{
+  background-color: transparent;
+}
+
 nav i,
 nav [class^="mdi-"],
 nav [class*="mdi-"],
@@ -523,6 +552,29 @@ nav i.material-icons header {
 
 .card.medium {
   height: 370px;
+}
+
+/* ANIMATIONS */
+[data-anime]{
+  opacity: 0;
+  transition:.4s;
+}
+
+[data-anime="bottom"]{
+  transform: translate3d(0, 100px,0);
+}
+
+[data-anime="left"]{
+  transform: translate3d(-100px, 0,0);
+}
+
+[data-anime="right"]{
+  transform: translate3d(100px, 0,0);
+}
+
+[data-anime].animate{
+  opacity: 1;
+  transform:translate3d(0,0,0) ;
 }
 
 /*MEDIA*/
@@ -653,7 +705,7 @@ nav i.material-icons header {
   }
 
   .card.medium {
-  height: 320px;
+  height: 400px;
 }
 
 .style-card{
@@ -685,5 +737,13 @@ nav i.material-icons header {
   .footer p{
     font-size:1.3em;
     top: 1.7em;
+  }
+
+  .card-content > p{
+    font-size: 1em;
+  }
+
+  .services p{
+    padding: 0 1em;
   }
 }
