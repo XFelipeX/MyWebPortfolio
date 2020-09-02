@@ -93,6 +93,20 @@ body {
   right: 0.2em;
 }
 
+/* TITLE */
+.title {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.title::after {
+  content: " ";
+  display: block;
+  border: 2px solid rgb(32, 32, 78);
+  margin: 0 auto;
+  width: 100px;
+}
+
 /* SERVICES */
 .services {
   background-color: black;
@@ -103,19 +117,6 @@ body {
   text-indent: 1em;
   text-align: left;
   padding: 0 .3em;
-}
-
-.services-title {
-  margin-top: 0;
-  font-size: 2em;
-}
-
-.services-title::after {
-  content: " ";
-  display: block;
-  border: 2px solid rgb(32, 32, 78);
-  margin: 0 auto;
-  width: 100px;
 }
 
 .box {
@@ -138,19 +139,6 @@ body {
 /*SKILLS*/
 .skills{
 background-color: #ccc;
-}
-
-.skills-title {
-  margin: 0 0 1em 0;
-  font-size: 2em;
-}
-
-.skills-title::after {
-  content: " ";
-  display: block;
-  border: 2px solid rgb(32, 32, 78);
-  margin: 0 auto;
-  width: 100px;
 }
 
 .skills .col .group-itens li {
@@ -220,6 +208,10 @@ background-color: #ccc;
   background-color: black;
 }
 
+.about .title::after{
+  width: 70px;
+}
+
 .style-card {
   height: 29em;
   width: 48%;
@@ -279,19 +271,6 @@ background-color: #ccc;
   width: 150px;
   height: 130px;
   box-shadow: 20px 5px 1px rgb(26, 26, 29);
-}
-
-.about-title {
-  margin: 0 0 1em 0;
-  font-size: 2em;
-}
-
-.about-title::after {
-  content: " ";
-  display: block;
-  border: 2px solid rgb(32, 32, 78);
-  margin: 0 auto;
-  width: 70px;
 }
 
 .button {
@@ -358,18 +337,6 @@ background-color: #ccc;
 
 .project-group img{
   height: 170px;
-}
-
-.projects-title {
-  font-size: 2em;
-}
-
-.projects-title::after {
-  content: " ";
-  display: block;
-  border: 2px solid rgb(32, 32, 78);
-  margin: 0 auto;
-  width: 100px;
 }
 
 .projects-links {
