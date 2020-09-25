@@ -224,6 +224,7 @@ background-color: #ccc;
 .style-card {
   background-color: #292424;
   transition: all 1s;
+  overflow:auto;
 }
 
 .about-info {
@@ -480,6 +481,7 @@ nav i.material-icons header {
   background-color: #ccc;
   border-radius: 2em;
   box-shadow: 8px 3px 5px #2d3a7d;
+  overflow: auto;
 }
 
 .card-content > h3 {
